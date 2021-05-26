@@ -43,6 +43,7 @@ public class SetupDAO {
 	public void delete(Setup setup) {
 		manager.getTransaction().begin();
 		manager.remove(setup);
+		manager.flush();
 		manager.getTransaction().commit();
 	}
 
